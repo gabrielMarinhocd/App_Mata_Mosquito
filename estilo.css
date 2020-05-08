@@ -12,3 +12,12 @@
 	width: 90px;
 	height: 90px;
 }
+
+/* transform permite modificar o espaço coordenado do modelo de formatação CSS */
+.ladoA{
+	transform: scaleX(1);
+}
+
+.ladoB{
+	transform: scaleX(-1);
+}
