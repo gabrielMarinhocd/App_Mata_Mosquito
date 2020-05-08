@@ -9,9 +9,11 @@
 <body onresize="ajustaTamanhoPalcoJogo()">
 <!-- onresize para atualizar as variaveis altura e largura toda vez que o tamnho da tela for modificada -->
 
-
 	<script type="text/javascript">
-		posicaoRandomica()
+
+		// Adicionando um novo mosquito a cada segundo (1000 milesegundos = 1 segundo) 
+		setInterval (function(){posicaoRandomica()
+		}, 1000)
 	</script>
 </body>
 </html>
