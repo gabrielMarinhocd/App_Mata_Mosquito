@@ -32,7 +32,7 @@ function posicaoRandomica() {
 	mosquito.src = 'imagens/mosquito.png'
 
 	// Adicionando a classe ao elemento
-	mosquito.className = 'mosquito1'
+	mosquito.className = tamanhoAleatorio()
 
 	//Ajustado a posição que a imagem vai aparecer na tela
 	mosquito.style.left = posicaoX + 'px'
@@ -43,3 +43,18 @@ function posicaoRandomica() {
 
 	document.body.appendChild(mosquito)
 }
+
+// Adicionando o tamanho ao mosquito
+function tamanhoAleatorio(){
+	//Limitando o mosquito a 3 tamanhos
+	var classe = Math.floor(Math.random() * 3)
+	switch(classe){
+		case 0:
+			return 'mosquito1'
+		case 1:
+			return 'mosquito2'
+		case 2:
+			return 'mosquito3'
+	}
+}
+
