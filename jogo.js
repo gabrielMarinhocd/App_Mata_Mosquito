@@ -2,10 +2,10 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 15
+var tempo = 5
 
 function ajustaTamanhoPalcoJogo(){
-	// Quardando largura e altura da página
+	// Guardando largura e altura da página
 	altura =  window.innerHeight
 	largura = window.innerWidth
 	console.log(largura, altura)
@@ -18,10 +18,18 @@ var cronometro = setInterval( function(){
 	tempo -= 1
 
 	if (tempo < 0){
+
+		// Parando o cronometro quando chegar a zero
 		clearInterval(cronometro)
+
+		// Parando a aparição de mosquitos na tela
 		clearInterval(criarMosquito)
-		alert('Vitoria')
+		
+		//Redirecionado para a pagina de vitoria
+		window.location.href ='vitoria.html'
+
 	} else { 
+		//Recendo e trocando os numeros do cronometro
 		document.getElementById('cronometro').innerHTML = tempo	
 	}
 } , 1000)
@@ -81,6 +89,7 @@ function posicaoRandomica() {
 		this.remove()
 	}
 
+	//lançando na pagina os mosquitos
 	document.body.appendChild(mosquito)
 
 }
