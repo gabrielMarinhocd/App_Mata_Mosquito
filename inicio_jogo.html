@@ -13,12 +13,12 @@
    			var nivel = document.getElementById('nivel').value
 
    			//Verificando se a varial não esta vazia
-
    			if (nivel === ''){
    				alert('Selecione o nivel para iniciar o jogo')
    				return false
    			}
-   			alert('Nivel')
+   			// Abrir pagina do jogo
+   			window.location.href = "jogo.html?"+nivel
 
    		}
    	</script>

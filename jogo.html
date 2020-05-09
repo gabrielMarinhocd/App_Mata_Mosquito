@@ -23,8 +23,10 @@
 		//Adicionando tempo ao cronometro
 		document.getElementById('cronometro').innerHTML = tempo
 		// Adicionando um novo mosquito a cada segundo (1000 milesegundos = 1 segundo) 
-		 var criarMosquito = setInterval (function(){posicaoRandomica()
-		}, 2000)
+		 var criarMosquito = setInterval (function(){
+		 	posicaoRandomica()
+		}, criarMosquitoTempo)
+		 //criarMosquitoTempo: Possui tempo definido 
 	</script>
 </body>
 </html>
