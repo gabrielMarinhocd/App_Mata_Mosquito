@@ -1,6 +1,7 @@
 
 var altura = 0
 var largura = 0
+var vidas = 1
 
 function ajustaTamanhoPalcoJogo(){
 	// Quardando largura e altura da página
@@ -15,7 +16,17 @@ function posicaoRandomica() {
 
 	//Removendo o mosquito anterior (caso exista)
 	if (document.getElementById('mosquito')){
+	//Remoção automatica
 		document.getElementById('mosquito').remove()
+		
+		console.log('Elemento selecionado ' + vidas)
+		//Trocando imagem coração cheio por coração vazio
+		if (vidas > 3) {
+			alert('Interromper jogo (game over)')
+		}else {
+			document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
+			vidas++
+		}
 	}
 
 	// Math.random(): Gerando largura e altura aleatorios porem respeitando o limite de tela do aparelho 
@@ -48,6 +59,11 @@ function posicaoRandomica() {
 
 	// Acicionado um id para cada mosquito
 	mosquito.id = 'mosquito'
+
+	//Retirando o mosquito quando clicado
+	mosquito.onclick = function(){
+		this.remove()
+	}
 
 	document.body.appendChild(mosquito)
 

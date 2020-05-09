@@ -8,12 +8,22 @@
 </head>
 <body onresize="ajustaTamanhoPalcoJogo()">
 <!-- onresize para atualizar as variaveis altura e largura toda vez que o tamnho da tela for modificada -->
+	
+	<div class="painel"> 
+		<div class="vidas">
+			<img id="v1" src="imagens/coracao_cheio.png">
+			<img id="v2" src="imagens/coracao_cheio.png">
+			<img  id="v3" src="imagens/coracao_cheio.png">
+		</div>
+
+		<div class="cronometro">Tempo restante: ?</div>
+	</div>
 
 	<script type="text/javascript">
 
 		// Adicionando um novo mosquito a cada segundo (1000 milesegundos = 1 segundo) 
 		setInterval (function(){posicaoRandomica()
-		}, 1000)
+		}, 2000)
 	</script>
 </body>
 </html>
