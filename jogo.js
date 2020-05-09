@@ -2,6 +2,7 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 15
 
 function ajustaTamanhoPalcoJogo(){
 	// Quardando largura e altura da página
@@ -11,6 +12,20 @@ function ajustaTamanhoPalcoJogo(){
 }
 
 ajustaTamanhoPalcoJogo()
+
+var cronometro = setInterval( function(){
+	//Tirando um segundo do cronometro
+	tempo -= 1
+
+	if (tempo < 0){
+		clearInterval(cronometro)
+		clearInterval(criarMosquito)
+		alert('Vitoria')
+	} else { 
+		document.getElementById('cronometro').innerHTML = tempo	
+	}
+} , 1000)
+
 
 function posicaoRandomica() {
 
@@ -22,6 +37,7 @@ function posicaoRandomica() {
 		//console.log('Elemento selecionado ' + vidas)
 		//Trocando imagem coração cheio por coração vazio
 		if (vidas > 3) {
+			// Abrira a pagina de game over quando não over mais vidas
 			window.location.href ='fim_de_jogo.html'
 		}else {
 			document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
