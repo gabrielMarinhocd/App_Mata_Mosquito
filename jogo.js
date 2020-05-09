@@ -2,7 +2,8 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 15
+var tempo = 30
+var pontuacao = 0
 
 var criarMosquitoTempo = 1500
 
@@ -103,8 +104,14 @@ function posicaoRandomica() {
 
 	//Retirando o mosquito quando clicado
 	mosquito.onclick = function(){
-		this.remove()
-	}
+        this.remove()
+
+        //Adicionando pontuação a cada click
+        pontuacao += 10
+        //Guardando pontuação
+        localStorage.setItem('pontuacao', pontuacao)
+        document.getElementById("pontuacao").innerHTML = pontuacao
+    }
 
 	//lançando na pagina os mosquitos
 	document.body.appendChild(mosquito)
@@ -127,7 +134,7 @@ function tamanhoAleatorio(){
 
 // Adicionando o lado em que o mosquito ira ficar
 function  ladoAleatorio() {
-	//Limitando o mosquito a 3 tamanhos
+	//	Limitando o mosquito a 3 tamanhos
 	var classe = Math.floor(Math.random() * 2)
 	switch(classe){
 		case 0:

@@ -7,12 +7,23 @@
    	<link rel="stylesheet" type="text/css" href="estilo.css"/>
 </head>
 <body>
-	<div class="container">
+	<div class="container" align="center">
 		<div class="row">
 			<div class="col">
 				<div class="d-flex justify-content-center">
 					<!-- Imagem vitoria -->
 					<img src="imagens/vitoria.png">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col " >
+				<div class="d-flex justify-content-center mb-4 bg-danger placar ">
+					Pontuação Final:<br/>45
+					<span id="pontuacao1"></span>
+				</div>
+					
 				</div>
 			</div>
 		</div>
@@ -27,5 +38,12 @@
 		</div>
 
 	</div>
+	<script type="text/javascript">
+		//Adciona a pontuação ao atributo pontos
+		 var pontos = localStorage.getItem('pontuacao')
+    	document.getElementById("pontuacao1").innerHTML = pontos
+    	// Retirando dados armazenados na sessão
+    	localStorage.clear()
+	</script>
 </body>
 </html>
