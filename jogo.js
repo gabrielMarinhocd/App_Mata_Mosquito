@@ -19,10 +19,10 @@ function posicaoRandomica() {
 	//Remoção automatica
 		document.getElementById('mosquito').remove()
 		
-		console.log('Elemento selecionado ' + vidas)
+		//console.log('Elemento selecionado ' + vidas)
 		//Trocando imagem coração cheio por coração vazio
 		if (vidas > 3) {
-			alert('Interromper jogo (game over)')
+			window.location.href ='fim_de_jogo.html'
 		}else {
 			document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
 			vidas++
