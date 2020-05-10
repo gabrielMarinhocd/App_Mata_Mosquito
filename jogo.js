@@ -107,7 +107,7 @@ function posicaoRandomica() {
         this.remove()
 
         //Adicionando pontuação a cada click
-        pontuacao += 10
+        pontuacao += 1
         //Guardando pontuação
         localStorage.setItem('pontuacao', pontuacao)
         document.getElementById("pontuacao").innerHTML = pontuacao
