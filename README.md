@@ -19,5 +19,5 @@ JavaScript
 Sublime Text 3
 
 Agradecimentos:
-O jogo foi feito com base nos conecimentos adquidos no curso Desenvolvimento Web Completo 2020 - 20 cursos + 20 projetos da Udemy, Jorge Sant Ana e Jamilton Damasceno.
+O jogo foi feito com base nos conecimentos adquiridos no curso Desenvolvimento Web Completo 2020 - 20 cursos + 20 projetos da Udemy, Jorge Sant Ana e Jamilton Damasceno.
 
